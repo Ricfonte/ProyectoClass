@@ -11,11 +11,12 @@ const listaPedidos = async(req, res) =>{
 }
 const idPedidos = async(req, res) =>{
     var idp = req.params.id;
-
     var listaFound = await Pedido.findById(idp)
     res.json(listaFound);
 }
-const deletePedidos =(req, res) =>{
-    res.json("aqui puedes borrar el pedido");
+const deletePedidos = async(req, res) =>{
+    var idp = req.params.id;
+    await Pedido.findByIdAndDelete(idp);
+    res.status(200) .json();
 }
 export { createPedidos, listaPedidos, deletePedidos, idPedidos }
