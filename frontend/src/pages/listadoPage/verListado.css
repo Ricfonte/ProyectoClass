@@ -1,0 +1,129 @@
+body {
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  
+  
+}
+
+.ver-listado-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+   
+  }
+  
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  h1 {
+    font-size: 44px;
+    margin: 0;
+    
+  }
+  
+  .hacer-pedido-button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    
+  }
+  
+  .listado-section {
+    background-color: white;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    
+  }
+  
+  .material-list {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .material-list-item {
+    border: 18px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .pedido-lista {
+    list-style: none;
+    padding: 0;
+    
+  }
+  
+  .pedido-item {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border: 1px solid #eeeeee;
+    border-radius: 5px;
+    margin-bottom: 10px;
+  }
+  
+  .pedido-item span {
+    flex-grow: 1;
+    margin-left: 20px;
+  }
+  
+  .estado-indicador {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+  
+ .magenta {
+    background-color: #000000;
+  }
+  
+  .cyan {
+    background-color: #019797;
+  }
+  
+  .yellow {
+    background-color: #ffff00;
+  }
+  
+  .black {
+    background-color: #008000;
+  }*/
+  
+  .selected {
+    background-color: #e0e0e0; /* Color de fondo cuando está seleccionado */
+  }
+  
+  .button {
+    padding: 8px;
+    background-color: #4CAF50;
+    color: white;
+    border: 1px solid white;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 10px;
+  }
+
+ 
+  
+  .material-container {
+  
+    margin: 10px;
+    padding: 15px;
+    border: 20px solid black;
+    border-radius: 8px;
+    background-color: rgb(250, 188, 188);
+  }
+  
+  
