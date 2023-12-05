@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import './crearPedido.css';
 
 const CrearPedido = () => {
@@ -20,7 +21,7 @@ const CrearPedido = () => {
   const departamentosPredefinidos = ['Plotter', 'Konica', 'Taller', 'ventas'];
   const productosPredefinidos = ['Adhesivo matte', 'Adhesivo brillante', 'Pvc matte','Pvc brillante','Tinta', 'Sintetico', 'Roller', 'Hojas', 'Sintra', 'Aluminio'];
   const medidasPredefinidas = ['unidades', 'rollos', 'cajas', 'planchas'];
-  const centimetrosPredefinidos = [0, 100, 107, 127, 137, 152, 160]
+  const centimetrosPredefinidos = [0, 90, 100, 107, 127, 137, 152, 160]
 
   const handleInputChange = (e, index) => {
     const { name, value, type, checked } = e.target;
@@ -61,18 +62,18 @@ const CrearPedido = () => {
 
       if (response.ok) {
         alert('Pedido creado exitosamente');
-        // Limpiar formulario
+        //le agregue esto para limpiar el formulario
         setPedidoData({
           nombre: '',
           departamento: '',
           fechaSolicitud: '',
           productos: [{ cantidad: 0, nombre: '', medida: 'cm', centimetros: 0, urgente: false }],
         });
-        // Redireccionar a la página de listado
+        // le puse esto para que me lleve a la pagina de listado
         navigate('/listado');
       } else {
         console.error('Error al crear el pedido');
-        // Puedes manejar el error de acuerdo a tus necesidades
+        
       }
     } catch (error) {
       console.error('Error en la solicitud:', error);
@@ -81,6 +82,9 @@ const CrearPedido = () => {
 
   return (
     <div className="crear-pedido-container">
+      <Link to="/listado">
+      <button className= "botonC" type="submit">Volver</button>
+      </Link>
       <h1>Crear Nuevo Pedido</h1>
       <form onSubmit={handleSubmit}>
         <label>
@@ -142,11 +146,13 @@ const CrearPedido = () => {
             </div>
           ))}
         </label>
-            <button type="button" onClick={() => setPedidoData(prevData => ({ ...prevData, productos: [...prevData.productos, { cantidad: 0, nombre: '', medida: 'cm', centimetros: 0, urgente: false }] }))}>
+            <button className="botonA" type="button" onClick={() => setPedidoData(prevData => ({ ...prevData, productos: [...prevData.productos, { cantidad: 0, nombre: '', medida: 'cm', centimetros: 0, urgente: false }] }))}>
                  Agregar Producto
             </button>
-
-        <button type="submit">Enviar Pedido</button>
+            
+          <button className= "botonB" type="submit">Enviar Pedido</button>
+       
+        
       </form>
     </div>
   );

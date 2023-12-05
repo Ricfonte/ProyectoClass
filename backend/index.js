@@ -1,16 +1,15 @@
 import express  from "express";
 import cors from "cors";
 import * as insumoRoutes from "./routes/insumosRoutes.js"
-import mongoose from "mongoose";
-
+import * as userRoutes from "./routes/userRoutes.js"
+import "./config/mongodb.js";
 
 const app = express();
 app.use(cors());
-mongoose.connect("mongodb://127.0.0.1:27017/Rayo")
-.then(() => console.log("Sigue, esta todo OK!!!"))
-.catch((e) => console.log(e));
+
 
 app.use(express.json());
 app.use(insumoRoutes.router);
+app.use(userRoutes.router)
 
 app.listen(8080);

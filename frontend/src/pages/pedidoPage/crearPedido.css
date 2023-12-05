@@ -36,3 +36,26 @@
     margin-left: 5px;
   }
   
+  .botonA{
+    background-color: yellow;
+    color: black;
+    margin-right: 18px;
+    
+    
+    
+  }
+  .botonB{
+    background-color: black;
+    color: white;
+    
+  }
+
+  .botonC{
+    background-color: magenta;
+    color: white;
+    margin-left: 500px;
+    width: 80px ;
+    font-size: 19px;
+
+    
+  }
