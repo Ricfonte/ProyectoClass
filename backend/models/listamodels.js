@@ -13,7 +13,10 @@ const pedidoSchema = new mongoose.Schema({
   departamento: { type: String, required: true },
   fechaSolicitud: { type: Date, required: true },
   productos: { type: [productoSchema], required: true, validate: [arrayMinLength, 'Debe haber al menos un producto en el pedido'] }
+ 
 });
+
+
 
 function arrayMinLength(arr) {
   return arr && arr.length > 0;

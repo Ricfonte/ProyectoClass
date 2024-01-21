@@ -17,6 +17,7 @@ export const VerListado = (props) => {
     updatedMaterialesList[index].pedidoEstado = estado;
     updatedMaterialesList[index].contenedorColor = color;
     setMaterialesList(updatedMaterialesList);
+    //axios.put("url pedidos",{estado:estado})
   };
 
   return (
